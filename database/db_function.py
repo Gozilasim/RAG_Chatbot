@@ -1,7 +1,5 @@
 from datetime import datetime
 from sqlalchemy.exc import SQLAlchemyError
-from langchain_community.chat_message_histories import ChatMessageHistory
-from langchain_core.chat_history import BaseChatMessageHistory
 from sqlalchemy import asc, delete
 from llama_index.llms import ChatMessage
 from typing import List

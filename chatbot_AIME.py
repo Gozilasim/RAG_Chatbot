@@ -15,8 +15,6 @@ import os
 os.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'
 
 
-from streamlit.runtime.scriptrunner.script_run_context import get_script_run_ctx
-
 # functions
 @st.cache_resource
 def initiate_rag():
@@ -209,6 +207,15 @@ def main():
 
     with st.sidebar:
         st.write(f"Session ID: {session_id}")
+        if st.button("New Chat"):
+                # Reset session data and assign a new session ID
+                print("=======Chat history deleted (button clicked)=======")
+                delete_all_data(session_id)
+                st.session_state.clear()
+                st.session_state.session_id = get_session_id()
+                st.session_state.messages=[]
+                st.session_state.greetings = False
+                print(f"session ID:  {session_id} ")
 
     #st.title("Infineon AI powered Manufacturing Engineer - MAL Prototype v1")
     if st.button("Help"):

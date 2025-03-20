@@ -2,9 +2,8 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 from fuzzywuzzy import fuzz
 from llm_model.TextPreprocessor import TextPreprocessor
-import pandas as pd
 from llm_model.config import config
-import requests
+
 
 QueryPrep = TextPreprocessor()
 # columns_to_round = ["Similirity Score", "cosine", "fuzzy", "word", "Ranking Score"]

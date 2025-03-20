@@ -1,6 +1,6 @@
 import pickle
 from langchain.vectorstores import VectorStore
-from langchain.embeddings import HuggingFaceEmbeddings
+
 
 
 

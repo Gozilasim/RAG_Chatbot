@@ -1,5 +1,4 @@
 # Load Modules
-import os
 import base64
 import httpx
 from pathlib import Path
